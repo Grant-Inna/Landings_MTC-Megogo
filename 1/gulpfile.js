@@ -19,35 +19,35 @@ gulp.task( 'browser', function() {
 });
 
 gulp.task('imageMIN', function() {
-    return gulp.src( 'src/images/*.{png,jpg,jpeg,svg}' )
+    return gulp.src( 'src/img/*.{png,jpg,jpeg,svg}' )
         .pipe(imagemin())
-        .pipe(gulp.dest( 'production/images/' ))
+        .pipe(gulp.dest( 'production/img/' ))
         .pipe(notify('Images Compress Success!'));
 });
 
 
 gulp.task('CSS', function() {
-    return gulp.src( 'src/styles/style.less' )
+    return gulp.src( 'src/css/style.less' )
         .pipe(less())
         .pipe(groupMedia())
         .pipe(autoprefixer({browsers: ['last 5 versions', '> 2%']}))
-        .pipe(gulp.dest( 'production/styles/' ))
+        .pipe(gulp.dest( 'production/css/' ))
         .pipe(cleanCSS())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest( 'production/styles/' ))
+        .pipe(gulp.dest( 'production/css/' ))
         .pipe(notify('CSS Success!'));
 });
 
 
 gulp.task('watch_CSS', ['browser'], function() {
-    gulp.watch('src/styles/*.less', ['CSS']);
-    gulp.watch('src/styles/*.less').on('change', browserSync.reload)
+    gulp.watch('src/css/*.less', ['CSS']);
+    gulp.watch('src/css/*.less').on('change', browserSync.reload)
 });
 
 
 gulp.task('watch_imageMIN', function() {
-    gulp.watch('src/images/*.{png,jpg,jpeg,svg}', ['imageMIN']);
-    gulp.watch('src/images/*.{png,jpg,jpeg,svg}').on('change', browserSync.reload)
+    gulp.watch('src/img/*.{png,jpg,jpeg,svg}', ['imageMIN']);
+    gulp.watch('src/img/*.{png,jpg,jpeg,svg}').on('change', browserSync.reload)
 });
 
 gulp.task('watch_JADE', ['browser'], function() {
@@ -58,6 +58,7 @@ gulp.task('watch_JADE', ['browser'], function() {
 gulp.task('jade', function() {
     return gulp.src( 'src/index.jade' )
         .pipe(jade())
+        .pipe(gulp.dest( 'production/' ))
         .pipe(rename('header.html'))
         .pipe(gulp.dest( 'production/' ))
         .pipe(rename('header.min.html'))
@@ -70,5 +71,5 @@ gulp.task('jade', function() {
 
 
 
-gulp.task('default', ['CSS', 'jade', 'watch_JADE', 'watch_CSS', 'imageMIN']);
+gulp.task('default', ['CSS', 'jade', 'watch_JADE', 'watch_CSS', 'imageMIN', 'watch_imageMIN']);
 gulp.task('images', ['imageMIN', 'watch_imageMIN']);
