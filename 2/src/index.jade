@@ -4,8 +4,24 @@ html
         include ../../common/head
     body
         #container
-
-
+            .header__container
+                .header
+                    .header__logo
+                    .header__elems
+                    .header__cross
+                .header__info
+                    .header__title Вам не придётся искать интересные кино и мультфильмы
+            .additionalInfo__container
+                .additionalInfo__slogan Огромный каталог фильмов
+                .additionalInfo__hd Full HD
+                .additionalInfo__channels
+                    strong 190
+                     | ТВ каналов
+                .additionalInfo__advertising Без рекламы
+            .main__button( onclick="document.getElementById('subscr-form').submit(); return false;" )
+                .main__text Смотреть
+                .main__price за 10 рублей в день
 
             include ../../common/footer
         include ../../common/script
+                          

@@ -1,5 +1,40 @@
 @import '../../../common/style';
 @import '../../../common/var';
 
+@green: rgb(143, 199, 23);
 
+.header__info {
+  background: rgba(46, 46, 46, 0.8);
+}
+.header__title {
+  color: white;
+}
+.header__slogan {
+  color: rgb(0, 209, 199);
+  font-weight: 600;
+}
 
+.additionalInfo__hd {
+  color: @green;
+
+}
+
+.additionalInfo__channels, .additionalInfo__advertising {
+  color: black;
+}
+
+.additionalInfo__advertising {
+  width: auto;
+  height: auto;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: .8rem 1.2rem;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.main__button {
+  background: @green;
+  border-radius: 3px;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.8);
+}
