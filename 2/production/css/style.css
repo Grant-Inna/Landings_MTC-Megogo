@@ -798,10 +798,10 @@ a {
 
 #container {
   position: relative;
-  max-width: 850px;
+  max-width: 820px;
   min-width: 320px;
   width: 100%;
-  max-height: 900px;
+  max-height: 850px;
   min-height: 220px;
   height: 100%;
   margin: 0 auto;
