@@ -746,6 +746,28 @@ ul.errors li {
 
 /*КОНЕЦ СТИЛЕЙ БИ*/
 
+@font-face {
+  font-family: "DinDisplay";
+  src: url("../font/PFDinDisplay.eot");
+  src: url('../font/PFDinDisplay.woff') format("woff"), url("../font/PFDinDisplay.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinDisplay-bold";
+  src: url('../font/PFDinDisplayPro-Bold.woff') format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinDisplay-Light";
+  src: url('../font/PFDinDisplayPro-Light.woff') format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -753,15 +775,13 @@ ul.errors li {
 }
 
 html {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'DinDisplay', Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
 }
 
 html,
 body {
-  font-family: 'Open Sans', sans-serif !important;
-  color: #000;
   height: 100%;
 }
 
@@ -906,8 +926,9 @@ a {
 }
 
 .header__title {
+  font-family: 'DinDisplay-light', Helvetica, Arial, sans-serif;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   text-align: center;
   margin-bottom: 1.5rem;
   font-weight: 400;
@@ -915,9 +936,8 @@ a {
 
 .header__slogan,
 .additionalInfo__slogan {
-  font-size: 1.5rem;
+  font-size: 2.1rem;
   text-transform: uppercase;
-  font-weight: 400;
   text-align: center;
 }
 
@@ -945,6 +965,7 @@ a {
 }
 
 .additionalInfo__hd {
+  font-family: 'DinDisplay-bold', Helvetica, Arial, sans-serif;
   font-weight: 800;
   font-size: 1.9rem;
 }
@@ -982,17 +1003,18 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
-  font-weight: 600;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .main__text {
+  font-family: 'DinDisplay-bold', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 800;
 }
 
 .main__price {
-  font-weight: 300;
+  font-family: 'DinDisplay-light', Helvetica, Arial, sans-serif;
+  font-weight: 400;
   -webkit-transform: scaleX(0.9) scaleY(0.9);
       -ms-transform: scaleX(0.9) scaleY(0.9);
           transform: scaleX(0.9) scaleY(0.9);
