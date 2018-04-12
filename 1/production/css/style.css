@@ -824,12 +824,14 @@ a {
 
 #container:before {
   content: ' ';
+  display: none;
   width: 100%;
   height: 45px;
 }
 
 #container:after {
   content: ' ';
+  display: none;
   width: 100%;
   height: 50px;
 }
