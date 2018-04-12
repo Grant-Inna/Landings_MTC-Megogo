@@ -1057,6 +1057,48 @@ a {
 
 /* FROM TO */
 
+body {
+  background: #f2f1f1;
+}
+
+.header__title {
+  margin-bottom: .1rem;
+}
+
+.main__button {
+  background: #00ada4;
+}
+
+.additionalInfo__container {
+  background: white;
+  border-radius: 3px;
+  width: 92%;
+  padding: .5rem;
+  -webkit-box-shadow: 0 7px 46px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 7px 46px 0 rgba(0, 0, 0, 0.15);
+}
+
+.additionalInfo__slogan {
+  margin: .5rem auto 1.5rem;
+}
+
+.additionalInfo__slogan > strong {
+  color: #00ada4;
+}
+
+.additionalInfo__hd {
+  color: #ff4e1f;
+}
+
+.additionalInfo__advertising {
+  margin-bottom: .5rem;
+  margin-top: .3rem;
+  min-height: 30px;
+  width: 90%;
+  background: url('../img/back-advert.png') center no-repeat;
+  background-size: contain;
+}
+
 @media screen and (min-width: 359px) and (min-height: 660px) and (orientation: portrait) {
   .header {
     height: 50px;
@@ -1219,6 +1261,10 @@ a {
   .main__button {
     margin-bottom: 4rem;
   }
+
+  .main__button {
+    margin-bottom: 9rem;
+  }
 }
 
 @media screen and (orientation: portrait) and (min-height: 550px) {
@@ -1245,10 +1291,40 @@ a {
   .additionalInfo__advertising {
     display: none;
   }
+
+  #container {
+    background-image: url('../img/bg-xs.png');
+  }
+
+  .additionalInfo__container {
+    display: none;
+  }
+
+  .additionalInfo__slogan {
+    display: none;
+  }
 }
 
 @media screen and (orientation: portrait) and (min-height: 450px) {
   .additionalInfo__channels {
     display: block;
+  }
+}
+
+@media screen and (max-height: 560px) and (orientation: portrait) {
+  #container {
+    background-image: url('../img/bg-xs.png');
+  }
+
+  .main__button {
+    margin-bottom: 4rem;
+  }
+
+  .additionalInfo__container {
+    margin-top: 3rem;
+  }
+
+  .additionalInfo__slogan {
+    display: none;
   }
 }

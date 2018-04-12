@@ -1,5 +1,54 @@
 @import '../../../common/style';
 @import '../../../common/var';
 
+@blue: rgb(0, 173, 164);
 
+body {
+  background: rgb(242, 241, 241);
+}
 
+#container {
+
+  .to-h-o( @xsm, @p, { background-image: url('../img/bg-xs.png') });
+  .to-h-o( @xxs, @l, { background-image: url('../img/bg-xs.png') });
+}
+
+.header__title {
+  margin-bottom: .1rem;
+}
+
+.main__button {
+  background: @blue;
+  .portrait( margin-bottom, 9rem );
+  .to-h-o( @xsm, @p, {  margin-bottom: 4rem });
+}
+
+.additionalInfo__container {
+  background: white;
+  border-radius: 3px;
+  width: 92%;
+  padding: .5rem;
+  box-shadow: 0 7px 46px 0 rgba(0, 0, 0, 0.15);
+  .to-h-o( @xxs, @l, { display: none });
+  .to-h-o( @xsm, @p, { margin-top: 3rem });
+}
+.additionalInfo__slogan {
+  margin: .5rem auto 1.5rem;
+  .to-h-o( @xsm, @p, { display: none });
+  .to-h-o( @xxs, @l, { display: none });
+
+  > strong {
+    color: @blue
+  }
+}
+.additionalInfo__hd {
+  color: rgb(255, 78, 31);
+}
+.additionalInfo__advertising {
+  margin-bottom: .5rem;
+  margin-top: .3rem;
+  min-height: 30px;
+  width: 90%;
+  background: url('../img/back-advert.png') center no-repeat;
+  background-size: contain;
+}
