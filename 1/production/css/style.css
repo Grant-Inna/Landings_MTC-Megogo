@@ -1021,6 +1021,10 @@ a {
 
 /* FROM TO */
 
+body {
+  background: black;
+}
+
 .header__info {
   background: rgba(46, 46, 46, 0.8);
 }
@@ -1106,7 +1110,7 @@ a {
   }
 }
 
-@media screen and (min-height: 220px) and (max-width: 560px) and (orientation: landscape) {
+@media screen and (min-height: 225px) and (max-width: 560px) and (orientation: landscape) {
   #container {
     height: 227px;
   }
@@ -1119,12 +1123,6 @@ a {
 
   .main__button {
     margin-bottom: 100px;
-  }
-}
-
-@media screen and (max-height: 350px) and (orientation: landscape) {
-  #container {
-    height: 227px !important;
   }
 }
 
