@@ -760,6 +760,24 @@ a {
 
   background: url('../img/bg.png') center no-repeat;
   background-size: 100% auto;
+
+  &:before {
+    content: ' ';
+    width: 100%;
+    height: 45px;
+    .to-h-o( 350px, @l, {
+      display: block;
+    });
+  }
+  &:after {
+    content: ' ';
+    width: 100%;
+    height: 50px;
+    .to-h-o( 350px, @l, {
+      display: block;
+    });
+  }
+
 }
 
 
