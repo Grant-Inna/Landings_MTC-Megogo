@@ -61,11 +61,11 @@ gulp.task('jade', function() {
         .pipe(gulp.dest( 'production/' ))
         .pipe(rename('header.html'))
         .pipe(gulp.dest( 'production/' ))
-        .pipe(rename('header.min.html'))
+        .pipe(rename('header.mobile.html'))
         .pipe(gulp.dest( 'production/' ))
         .pipe(rename('footer.html'))
         .pipe(gulp.dest( 'production/' ))
-        .pipe(rename('footer.min.html'))
+        .pipe(rename('footer.mobile.html'))
         .pipe(gulp.dest( 'production/' ));
 });
 
