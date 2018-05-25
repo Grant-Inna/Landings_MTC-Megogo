@@ -14,36 +14,71 @@ body {
 }
 
 .header__title {
-  margin-bottom: .1rem;
+
+  font-family: 'DinDisplay-light', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+
+  margin-bottom: 1rem;
+  color: @gray - 50;
+  
+}
+.header__elems {
+  max-width: 70px;
+  margin-left: 10px;
+}
+.header__age {
+
+  font-family: 'DinDisplay-light', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color: #b4b4b4;
+  margin-left: auto;
+  font-size: 1.9rem;
+}
+
+.header__slogan {
+  font-weight: bold;
 }
 
 .main__button {
+  width: 94%;
   background: @blue;
-  .portrait( margin-bottom, 9rem );
-  .to-h-o( @xsm, @p, {  margin-bottom: 4rem });
+  margin-top: 2rem;
+  .portrait( margin-bottom, 1rem );
+  .to-h-o( @xsm, @p, {  margin-bottom: .3rem; margin-top: 1rem; });
 }
 
 .additionalInfo__container {
   background: white;
   border-radius: 3px;
   width: 94%;
-  padding: .5rem;
+  padding: 1.4rem .5rem;
   box-shadow: 0 7px 46px 0 rgba(0, 0, 0, 0.15);
-  .to-h-o( @xxs, @l, { display: none });
-  .to-h-o( @xsm, @p, { margin-top: 3rem });
+  .to-h-o( 600px, @p, { margin-top: 0});
+
+  .from-h( 710px, margin-bottom, 5rem);
 }
-.additionalInfo__slogan {
+
+.header__slogan {
   margin: .5rem auto 1.5rem;
   font-size: 1.7rem;
-  .to-h-o( @xsm, @p, { display: none });
-  .to-h-o( @xxs, @l, { display: none });
-
-  > strong {
-    color: @blue
-  }
+  text-align: center;
+  .to-h-o( 600px, @p, { display: none });
+  .to-h-o( 400px, @l, { display: none });
 }
+
+.additionalInfo__channels  > strong {
+  color: @blue
+}
+
 .additionalInfo__hd {
-  color: rgb(255, 78, 31);
+  text-align: center;
+  font-weight: 300;
+  > strong {
+    color: rgb(255, 78, 31);
+  }
+  .to-h-o( 600px, @p, { display: none });
+  .to-h-o( 400px, @l, { display: none });
 }
 .additionalInfo__advertising {
   margin-bottom: .5rem;
@@ -52,4 +87,23 @@ body {
   width: 90%;
   background: url('../img/back-advert.png') center no-repeat;
   background-size: contain;
+}
+
+
+@gray: #868686;
+
+.main__info {
+
+  font-family: 'DinDisplay-light', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  transform: scaleX(.9) scaleY(.9);
+
+  font-size: 22px;
+  text-align: center;
+  color: @gray;
+}
+.footer__info {
+  text-align: center;
+  color: @gray;
+  font-size: 1.4rem;
 }

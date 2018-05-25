@@ -846,14 +846,14 @@ a {
   content: ' ';
   display: none;
   width: 100%;
-  height: 45px;
+  height: 44px;
 }
 
 #container:after {
   content: ' ';
   display: none;
   width: 100%;
-  height: 50px;
+  height: 48px;
 }
 
 .header__container {
@@ -971,19 +971,15 @@ a {
 }
 
 .main__button {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
   width: 85%;
   border-radius: 2px;
@@ -1062,32 +1058,60 @@ body {
 }
 
 .header__title {
-  margin-bottom: .1rem;
+  font-family: 'DinDisplay-light', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #545454;
+}
+
+.header__elems {
+  max-width: 70px;
+  margin-left: 10px;
+}
+
+.header__age {
+  font-family: 'DinDisplay-light', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #b4b4b4;
+  margin-left: auto;
+  font-size: 1.9rem;
+}
+
+.header__slogan {
+  font-weight: bold;
 }
 
 .main__button {
+  width: 94%;
   background: #00ada4;
+  margin-top: 2rem;
 }
 
 .additionalInfo__container {
   background: white;
   border-radius: 3px;
   width: 94%;
-  padding: .5rem;
+  padding: 1.4rem .5rem;
   -webkit-box-shadow: 0 7px 46px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 7px 46px 0 rgba(0, 0, 0, 0.15);
 }
 
-.additionalInfo__slogan {
+.header__slogan {
   margin: .5rem auto 1.5rem;
   font-size: 1.7rem;
+  text-align: center;
 }
 
-.additionalInfo__slogan > strong {
+.additionalInfo__channels > strong {
   color: #00ada4;
 }
 
 .additionalInfo__hd {
+  text-align: center;
+  font-weight: 300;
+}
+
+.additionalInfo__hd > strong {
   color: #ff4e1f;
 }
 
@@ -1098,6 +1122,23 @@ body {
   width: 90%;
   background: url('../img/back-advert.png') center no-repeat;
   background-size: contain;
+}
+
+.main__info {
+  font-family: 'DinDisplay-light', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-transform: scaleX(0.9) scaleY(0.9);
+      -ms-transform: scaleX(0.9) scaleY(0.9);
+          transform: scaleX(0.9) scaleY(0.9);
+  font-size: 22px;
+  text-align: center;
+  color: #868686;
+}
+
+.footer__info {
+  text-align: center;
+  color: #868686;
+  font-size: 1.4rem;
 }
 
 @media screen and (min-width: 359px) and (min-height: 660px) and (orientation: portrait) {
@@ -1264,7 +1305,7 @@ body {
   }
 
   .main__button {
-    margin-bottom: 9rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -1284,6 +1325,28 @@ body {
   }
 }
 
+@media screen and (max-height: 400px) and (orientation: landscape) {
+  .additionalInfo__container {
+    padding: .1rem;
+  }
+
+  .main__button {
+    margin: .7rem auto .2rem;
+  }
+
+  .footer__info {
+    display: none;
+  }
+
+  .header__slogan {
+    display: none;
+  }
+
+  .additionalInfo__hd {
+    display: none;
+  }
+}
+
 @media screen and (max-height: 359px) and (orientation: landscape) {
   .additionalInfo__channels {
     display: none;
@@ -1296,19 +1359,21 @@ body {
   #container {
     background-image: url('../img/bg-xs.png');
   }
+}
 
-  .additionalInfo__container {
-    display: none;
-  }
-
-  .additionalInfo__slogan {
-    display: none;
+@media screen and (orientation: portrait) and (min-height: 500px) {
+  .additionalInfo__channels {
+    display: block;
   }
 }
 
-@media screen and (orientation: portrait) and (min-height: 450px) {
-  .additionalInfo__channels {
-    display: block;
+@media screen and (max-height: 400px) and (orientation: portrait) {
+  .additionalInfo__advertising {
+    display: none;
+  }
+
+  .footer__info {
+    display: none;
   }
 }
 
@@ -1318,14 +1383,27 @@ body {
   }
 
   .main__button {
-    margin-bottom: 4rem;
+    margin-bottom: .3rem;
+    margin-top: 1rem;
   }
+}
 
+@media screen and (max-height: 600px) and (orientation: portrait) {
   .additionalInfo__container {
-    margin-top: 3rem;
+    margin-top: 0;
   }
 
-  .additionalInfo__slogan {
+  .header__slogan {
     display: none;
+  }
+
+  .additionalInfo__hd {
+    display: none;
+  }
+}
+
+@media screen and (min-height: 710px) {
+  .additionalInfo__container {
+    margin-bottom: 5rem;
   }
 }

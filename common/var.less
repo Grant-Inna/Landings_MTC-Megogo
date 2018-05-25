@@ -457,7 +457,11 @@
     @content();
   }
 }
-
+.from-h(@min_height, @name, @value){
+  @media screen and (min-height: @min_height){
+      @{name}: @value;
+  }
+}
 
 .from-to(@min_width, @max_width, @content){
   @media screen and (min-width: @min_width) and (max-width: @max_width){
