@@ -1153,6 +1153,9 @@ body {
 
 .main__price {
   font-size: 22px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 300;
+  text-align: center;
 }
 
 @media screen and (min-width: 359px) and (min-height: 660px) and (orientation: portrait) {

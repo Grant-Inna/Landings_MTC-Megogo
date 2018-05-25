@@ -1138,8 +1138,8 @@ body {
 }
 
 .main__info {
-  font-family: 'DinDisplay-light', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 300;
   -webkit-transform: scaleX(0.9) scaleY(0.9);
       -ms-transform: scaleX(0.9) scaleY(0.9);
           transform: scaleX(0.9) scaleY(0.9);
