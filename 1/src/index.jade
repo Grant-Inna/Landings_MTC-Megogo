@@ -7,6 +7,7 @@ html
             .header__container
                 .header
                     .header__logo
+                    .header__age 0+
                     .header__elems
                     a( href="http://megogo.net/ru" ).header__cross
                         .icon__cross
@@ -14,14 +15,18 @@ html
                     .header__title Вам не придётся искать интересные кино и мультфильмы
                     .header__slogan Огромный каталог фильмов
             .additionalInfo__container
-                .additionalInfo__hd Full HD
-                .additionalInfo__channels
+                .additionalInfo__channels ПОДКЛЮЧИТЕ&nbsp;
                     strong 190&nbsp;
                     | ТВ каналов
+                .additionalInfo__hd и смотрите
+                    strong &nbsp;Full HD&nbsp;
+                    | фильмы прямо сейчас
                 .additionalInfo__advertising Без рекламы
             .main__button( onclick="document.getElementById('subscr-form').submit(); return false;" )
-                .main__text Смотреть
-                .main__price за 10 рублей в день
+                .main__text ПОДКЛЮЧИТЬ
+            .container
+                .main__price Первый день бесплатно, далее 10 руб. в день
+                .footer__info Оплата будет произведена с основного счёта +70000000000, услуга оказывается МТС совместно с ООО «Автоматизация счетов»
 
             include ../../common/footer
         include ../../common/script

@@ -14,18 +14,37 @@ body {
 }
 .header__title {
   color: white;
+
+  .to-h-o( 600px, @p, { margin-bottom: .2rem });
+  .to-h-o( 400px, @l, { margin-bottom: .2rem });
 }
 .header__slogan {
   color: rgb(0, 209, 199);
+
+
+  .to-h-o( 600px, @p, { display: none });
+  .to-h-o( 400px, @l, { display: none });
+}
+.header__elems {
+  max-width: 100px;
 }
 
+
 .additionalInfo__hd {
+  font-family: 'DinDisplay-Light', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+.additionalInfo__hd strong {
   color: @green;
 
 }
 
 .additionalInfo__channels, .additionalInfo__advertising {
   color: black;
+}
+.additionalInfo__channels {
+  margin: 1rem;
 }
 
 .additionalInfo__advertising {
@@ -43,4 +62,24 @@ body {
   background: @green;
   border-radius: 3px;
   box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem !important;
+}
+
+
+.container {
+  .column-center;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 2px;
+  padding: .4rem;
+  width: 94%;
+  color: #d1d1d1;
+  font-size: 1.6rem;
+  margin-bottom: auto;
+
+  > div {
+    text-align: center;
+  }
+}
+.main__price {
+  font-size: 22px;
 }
