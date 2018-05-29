@@ -188,7 +188,7 @@ a {
   /* 1 */
   -webkit-text-decoration-skip: objects;
   /* 2 */
-  .un-link;
+  color: inherit;
 }
 
 /**
@@ -923,13 +923,7 @@ a {
   font-family: 'DinDisplay-bold', Helvetica, Arial, sans-serif;
   font-weight: 800;
   font-size: 1.9rem;
-
-  .landscape( display, none );
-  .landscape-h( @sm, display, block );
-
-  .portrait( display, none );
-  .portrait-w( @xxs, display, block );
-  .portrait-h( 550px, display, block );
+  display: block;
 
 }
 .additionalInfo__channels {
@@ -943,6 +937,13 @@ a {
 .additionalInfo__advertising {
   .to-h-o( @xxs, @l, { display: none });
   .to-h-o( 400px, @p, { display: none });
+}
+
+
+
+.wrapper {
+  .column-center;
+  .full-width;
 }
 
 .main__button {
